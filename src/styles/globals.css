@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply font-arabic p-0 m-0 outline-0 box-border flex-wrap;
+    }
+    body {
+        @apply overflow-x-hidden bg-[#f4f4f4];
+    }
+    img {
+        @apply align-middle;
+    }
+    a {
+        @apply no-underline hover:no-underline;
+    }
+}
+.dropDownShadow {
+    box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
+}
+@layer components {
+    .rtl {
+        direction: rtl;
+    }
+
+    .btn {
+        @apply px-4 py-2 rounded-md bg-white text-black-500 border border-transparent flex justify-center items-center;
+    }
+
+    .primary {
+        @apply bg-[#2B8DC5] text-white border border-transparent;
+    }
+
+    .secondary {
+        @apply bg-black-700 text-white border border-transparent;
+    }
+
+    .outline {
+        @apply bg-white text-black-700 border border-gray-200;
+    }
+
+    .danger {
+        @apply bg-red-500 text-white border border-transparent;
+    }
+}
+
+/* Custom CSS */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff444467;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 0;
+    bottom: -3px;
+    background-color: #ff4444;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2b8dc581;
+}
+
+input:checked + .slider:before {
+    background-color: #2b8dc5;
+}
+
+/* input:focus + .slider {
+  box-shadow: 0 0 1px #ff444467;
+} */
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scroll-bar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* auth  */
+.auth-bg {
+    background: rgb(65, 155, 193);
+    background: linear-gradient(
+        90deg,
+        rgba(65, 155, 193, 1) 50%,
+        rgba(64, 94, 110, 1) 100%
+    );
+}
